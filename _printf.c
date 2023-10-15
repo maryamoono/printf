@@ -6,8 +6,9 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int m, s_coont, coont = 0;
+	unsigned int m, coont = 0;
 	va_list lol;
+	char *str;
 
 	va_start(lol, format);
 	for (m = 0; format && format[m] != '\0'; m++)
@@ -19,19 +20,27 @@ int _printf(const char *format, ...)
 		else if (format[m] == '%' && format[m + 1] == 'c')
 		{
 			putchar(va_arg(lol, int));
+			m++;
 		}
 		else if (format[m + 1] == 's')
 		{
-			s_coont = puts(va_arg(lol, char *));
-			coont += (s_coont - 1);
+			str = va_arg(lol, char *);
+			coont += _print_str(str) - 1;
 			m++;
 		}
 		else if (format[m + 1] == '%')
 		{
 			putchar('%');
+			m++;
+		}
+		else
+		{
+			putchar('%');
+			putchar(format[++m]);
 		}
 		coont += 1;
 	}
 	va_end(lol);
 	return (coont);
 }
+
