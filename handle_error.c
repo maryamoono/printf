@@ -17,5 +17,5 @@ int handle_casses(const char *format, va_list lol)
 		va_end(lol);
 		return (0);
 	}
-	return 0;
+	return (0);
 }
