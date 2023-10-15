@@ -14,11 +14,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[m] != '%')
 		{
-			putchar(format[m]);
+			_putchar(format[m]);
 		}
 		else if (format[m] == '%' && format[m + 1] == 'c')
 		{
-			putchar(va_arg(lol, int));
+			_putchar(va_arg(lol, int));
 		}
 		else if (format[m + 1] == 's')
 		{
@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[m + 1] == '%')
 		{
-			putchar('%');
+			_putchar('%');
 		}
 		coont += 1;
 	}
