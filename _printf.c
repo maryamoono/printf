@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[m + 1] == 's')
 		{
-			s_coont = puts(va_arg(lol, char *));
+			s_coont = _puts(va_arg(lol, char *));
 			coont += (s_coont - 1);
 			m++;
 		}
