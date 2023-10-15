@@ -9,6 +9,6 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 unsigned int _print_str(char *str);
-void handle_casses(const char *format);
+int handle_casses(const char *format, va_list lol);
 #endif
 

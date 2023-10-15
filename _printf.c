@@ -10,8 +10,8 @@ int _printf(const char *format, ...)
 	va_list lol;
 	char *str;
 
-	handle_casses(format);
 	va_start(lol, format);
+	handle_casses(format, lol);
 	for (m = 0; format && format[m] != '\0'; m++)
 	{
 		if (format[m] != '%')
