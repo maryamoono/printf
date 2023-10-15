@@ -10,9 +10,7 @@ int _printf(const char *format, ...)
 	va_list lol;
 	char *str;
 
-	if (format == NULL)
-		return (-1);
-
+	handle_casses(format);
 	va_start(lol, format);
 	for (m = 0; format && format[m] != '\0'; m++)
 	{
@@ -46,4 +44,3 @@ int _printf(const char *format, ...)
 	va_end(lol);
 	return (coont);
 }
-
