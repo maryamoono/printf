@@ -10,16 +10,19 @@ int _printf(const char *format, ...)
 	va_list lol;
 	char *str;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(lol, format);
 	for (m = 0; format && format[m] != '\0'; m++)
 	{
 		if (format[m] != '%')
 		{
-			putchar(format[m]);
+			_putchar(format[m]);
 		}
 		else if (format[m] == '%' && format[m + 1] == 'c')
 		{
-			putchar(va_arg(lol, int));
+			_putchar(va_arg(lol, int));
 			m++;
 		}
 		else if (format[m + 1] == 's')
@@ -30,13 +33,13 @@ int _printf(const char *format, ...)
 		}
 		else if (format[m + 1] == '%')
 		{
-			putchar('%');
+			_putchar('%');
 			m++;
 		}
 		else
 		{
-			putchar('%');
-			putchar(format[++m]);
+			_putchar('%');
+			_putchar(format[++m]);
 		}
 		coont += 1;
 	}
