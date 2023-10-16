@@ -1,16 +1,4 @@
 #include "main.h"
-
-int handle_unknown_format(const char *format, unsigned int *m)
-{
-	*m += 1;
-	while (format[*m] == ' ')
-	{
-		*m += 1;
-	}
-	_putchar('%');
-	_putchar(format[*m]);
-	return 2;
-}
 /**
  * _printf - that function that used to print string or format string
  * @format: its refers to letters thar used with strings
@@ -21,6 +9,7 @@ int _printf(const char *format, ...)
 	unsigned int m, coont = 0;
 	va_list lol;
 	char *str;
+	int num;
 
 	va_start(lol, format);
 	handle_casses(format, lol);
@@ -40,16 +29,18 @@ int _printf(const char *format, ...)
 			m++;
 		}
 		else if (format[m + 1] == 'd' || format[m + 1] == 'i')
-			coont = print_integer(va_arg(lol, int)) - 1;
+		{
+			num = va_arg(lol, int);
+			coont += _print_str(get_int(num));
+			m++;
+		}
 		else if (format[m + 1] == '%')
 		{
 			_putchar('%');
 			m++;
 		}
 		else
-		{
-			coont += handle_unknown_format(format, &m);
-		}
+			_putchar('%');
 		coont += 1;
 	}
 	va_end(lol);
