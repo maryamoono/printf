@@ -15,9 +15,7 @@ int _printf(const char *format, ...)
 	for (m = 0; format && format[m] != '\0'; m++)
 	{
 		if (format[m] != '%')
-		{
 			_putchar(format[m]);
-		}
 		else if (format[m] == '%' && format[m + 1] == 'c')
 		{
 			_putchar(va_arg(lol, int));
@@ -30,9 +28,7 @@ int _printf(const char *format, ...)
 			m++;
 		}
 		else if (format[m + 1] == 'd' || format[m + 1] == 'i')
-		{
 			coont = print_integer(va_arg(lol, int)) - 1;
-		}
 		else if (format[m + 1] == '%')
 		{
 			_putchar('%');
