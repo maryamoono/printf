@@ -36,8 +36,16 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			m++;
+			/*
 			_putchar('%');
-			_putchar(format[++m]);
+			_putchar(format[++m]);*/
+			while(format[m] == ' '){
+				m++;
+			}
+			_putchar('%');
+			_putchar(format[m]);
+			coont += 2;
 		}
 		coont += 1;
 	}

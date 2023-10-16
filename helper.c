@@ -6,14 +6,14 @@
  */
 unsigned int _print_str(char *str)
 {
-	unsigned int count = 0;
+	unsigned int coont = 0;
 
 	while (*str != '\0')
 	{
 		_putchar(*str);
 		str++;
-		count++;
+		coont++;
 	}
-	return (count);
+	return (coont);
 }
 
