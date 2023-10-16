@@ -29,6 +29,10 @@ int _printf(const char *format, ...)
 			coont += _print_str(str) - 1;
 			m++;
 		}
+		else if (format[m + 1] == 'd' || format[m + 1] == 'i')
+		{
+			coont = print_integer(va_arg(lol, int)) - 1;
+		}
 		else if (format[m + 1] == '%')
 		{
 			_putchar('%');
