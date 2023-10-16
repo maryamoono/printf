@@ -1,4 +1,16 @@
 #include "main.h"
+
+int handle_unknown_format(const char *format, unsigned int *m)
+{
+	*m += 1;
+	while (format[*m] == ' ')
+	{
+		*m += 1;
+	}
+	_putchar('%');
+	_putchar(format[*m]);
+	return 2;
+}
 /**
  * _printf - that function that used to print string or format string
  * @format: its refers to letters thar used with strings
@@ -36,16 +48,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			m++;
-			/*
-			_putchar('%');
-			_putchar(format[++m]);*/
-			while(format[m] == ' '){
-				m++;
-			}
-			_putchar('%');
-			_putchar(format[m]);
-			coont += 2;
+			coont += handle_unknown_format(format, &m);
 		}
 		coont += 1;
 	}
