@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * get_int - lklkjdfl
  * @v: xmfg
