@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	int num;
 
 	va_start(lol, format);
-	handle_casses(format, lol);
 	for (m = 0; format && format[m] != '\0'; m++)
 	{
 		if (format[m] != '%')
