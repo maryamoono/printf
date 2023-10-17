@@ -8,6 +8,6 @@ char *get_int(int v)
 {
 	static char buffer[BUFF_SIZE];
 
-	sprintf(buffer, "%d" , v);
+	sprintf(buffer, "%d", v);
 	return (buffer);
 }

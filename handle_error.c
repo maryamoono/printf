@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * handle_casses - dawdwd
+ * handle_errors - dawdwd
  * @format: adw
  * @lol: dwadwa
  * Return: nothing

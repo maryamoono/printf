@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *printBinary - This is the point of the code
+ *_printBinary - This is the point of the code
  *@num:l kjfv
  *Return:0 Sucess
  */
