@@ -6,8 +6,15 @@
  */
 unsigned int _print_str(char *str)
 {
-	unsigned int coont = 0;
+	unsigned int coont = 0, s;
+	char *x = "(null)";
 
+	if (!str)
+	{
+		for (s = 0 ; s < 6 ; s++)
+			_putchar(x[s]);
+		return (s);
+	}
 	while (*str != '\0')
 	{
 		_putchar(*str);

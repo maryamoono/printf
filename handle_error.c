@@ -5,17 +5,17 @@
  * @lol: dwadwa
  * Return: nothing
  */
-int handle_casses(const char *format, va_list lol)
+int handle_errors(const char *format, va_list lol)
 {
 	if (!format || (format[0] == '%' && !format[1]))
 	{
 		va_end(lol);
-		return (-1);
+		exit(98);
 	}
 	if (!format[0])
 	{
 		va_end(lol);
-		return (0);
+		exit(98);
 	}
 	return (0);
 }
