@@ -4,7 +4,7 @@
  *@num:l kjfv
  *Return:0 Sucess
  */
-int printBinary(unsigned int num)
+int _printBinary(unsigned int num)
 {
 	char buffer[1024], temp;
 	int index = 0;
