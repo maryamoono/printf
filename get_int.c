@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * get_int - lklkjdfl
- * @v: xmfg
- * Return: hvn
+ * get_int - lklkjdflvf vb
+ * @v: xmfg bg
+ * Return: hvn mar
  */
 char *get_int(int v)
 {

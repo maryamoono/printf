@@ -1,45 +1,45 @@
 #include "main.h"
 /**
- *handle_format - This is the entry point of the code
- *@args: ujrhfneu
- *@format: ijhfun
- *Return:0 Success
+ *handle_format - maryamandosama
+ *@args: maryamandosama
+ *@format: maryamandosama
+ *Return: vnhg
  */
 int handle_format(const char *format, va_list args)
 {
-	unsigned int h = 0, count = 0;
+	unsigned int v = 0, coont = 0;
 	int r_val, num;
 
-	for (; format[h] != '\0'; h++)
+	for (; format[v] != '\0'; v++)
 	{
-		if (format[h] != '%')
-			_putchar(format[h]);
-		else if (format[h + 1] == 'c')
+		if (format[v] != '%')
+			_putchar(format[v]);
+		else if (format[v + 1] == 'c')
 		{
 			_putchar(va_arg(args, int));
-			h++; }
-		else if (format[h + 1] == 's')
+			v++; }
+		else if (format[v + 1] == 's')
 		{
 			r_val = _print_str(va_arg(args, char *));
-			h++;
-			count += (r_val - 1); }
-		else if (format[h + 1] == 'b')
+			v++;
+			coont += (r_val - 1); }
+		else if (format[v + 1] == 'b')
 		{
-			count += (_printBinary(va_arg(args, unsigned int))) - 1;
-			h++; }
-		else if (format[h + 1] == 'd' || format[h + 1] == 'i')
+			coont += (_printBinary(va_arg(args, unsigned int))) - 1;
+			v++; }
+		else if (format[v + 1] == 'd' || format[v + 1] == 'i')
 		{
 			num = va_arg(args, int);
 			r_val = _print_str(get_int(num));
-			count += (r_val - 1);
-			h++; }
-		else if (format[h + 1] == '%')
+			coont += (r_val - 1);
+			v++; }
+		else if (format[v + 1] == '%')
 		{
 			_putchar('%');
-			h++; }
+			v++; }
 		else
 			_putchar('%');
-		count += 1;
+		coont += 1;
 	}
-	return (count);
+	return (coont);
 }

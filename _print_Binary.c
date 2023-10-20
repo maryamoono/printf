@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- *_printBinary - This is the point of the code
- *@num:l kjfv
- *Return:0 Sucess
+ *_printBinary - print waht acode
+ *@num: uijn
+ *Return: nvh
  */
 int _printBinary(unsigned int num)
 {
-	char buffer[1024], temp;
+	char buffer[1024], pem;
 	int index = 0;
-	int i, digit;
+	int m, digit;
 
 	if (num == 0)
 	{
@@ -27,11 +27,11 @@ int _printBinary(unsigned int num)
 	{
 		buffer[index++] = '0';
 	}
-	for (i = 0; i < index / 2; i++)
+	for (m = 0; m < index / 2; m++)
 	{
-		temp = buffer[i];
-		buffer[i] = buffer[index - 1 - i];
-		buffer[index - 1 - i] = temp;
+		pem = buffer[m];
+		buffer[m] = buffer[index - 1 - m];
+		buffer[index - 1 - m] = pem;
 	}
 
 	buffer[index] = '\0';
