@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * handle_errors - dawdwd
- * @format: adw
- * @lol: dwadwa
- * Return: nothing
+ * handle_errors - maryamandosam
+ * @format: mrat
+ * @lol: dosamath
+ * Return: i dne leiaz
  */
 int handle_errors(const char *format, va_list lol)
 {
